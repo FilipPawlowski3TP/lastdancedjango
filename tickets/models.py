@@ -1,23 +1,40 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Ticket(models.Model):
-    CATEGORY_CHOICES = [
-        ('computer', 'Komputer'),
-        ('printer', 'Drukarka'),
-        ('other', 'Inne'),
+    STATUS_CHOICES = [
+        ('pending', 'Oczekujące'),
+        ('in_progress', 'W trakcie'),
+        ('resolved', 'Rozwiązane'),
     ]
 
-    title = models.CharField(max_length=100)
+    CATEGORY_CHOICES = [
+        ('komputer', 'Komputer'),
+        ('drukarka', 'Drukarka'),
+        ('inny', 'Inny'),
+    ]
+
+    title = models.CharField(max_length=255)
     description = models.TextField()
-    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
-    status = models.CharField(max_length=20, choices=[('pending', 'Oczekujące'), ('in_progress', 'W trakcie'), ('resolved', 'Rozwiązane')], default='pending')
+    status = models.CharField(max_length=50, choices=STATUS_CHOICES, default='oczekujące')
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='inny')
+    image = models.ImageField(upload_to='ticket_images/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='ticket_images/', null=True, blank=True)  # Upewnij się, że to jest poprawnie
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='assigned_tickets')
+    updated_at = models.DateTimeField(auto_now=True)  # Dodajemy pole updated_at
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tickets')
+    assigned_to = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL,
+                                    related_name='assigned_tickets')
 
     def __str__(self):
         return self.title
 
+    def get_status_color(self):
+        if self.status == 'pending':
+            return '#FF0000'
+        elif self.status == 'in_progress':
+            return '#ffc107'
+        elif self.status == 'resolved':
+            return '#28a745'
+        return '#6c757d'  # Kolor szary jako domyślny

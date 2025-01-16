@@ -1,5 +1,6 @@
 {% extends 'tickets/base.html' %}
 
+
 {% block content %}
 <h1>Lista Zgłoszeń</h1>
 
@@ -21,10 +22,23 @@
         {% for ticket in tickets %}
         <tr>
             <td><a href="{% url 'ticket_detail' ticket.id %}">{{ ticket.title }}</a></td>
-            <td>{{ ticket.get_status_display }}</td>
+            <td>
+                <span class="badge 
+                    {% if ticket.status == 'pending' %}
+                        badge-warning
+                    {% elif ticket.status == 'in_progress' %}
+                        badge-info
+                    {% elif ticket.status == 'resolved' %}
+                        badge-success
+                    {% endif %}
+                ">
+                    {{ ticket.get_status_display }}     
+                </span>
+            </td>
             <td>{{ ticket.created_at }}</td>
         </tr>
         {% endfor %}
     </tbody>
+
 </table>
 {% endblock %}

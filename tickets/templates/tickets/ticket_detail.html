@@ -1,16 +1,39 @@
 {% extends 'tickets/base.html' %}
 
 {% block content %}
-<h1>{{ ticket.title }}</h1>
-<p><strong>Status:</strong> {{ ticket.get_status_display }}</p>
-<p><strong>Opis:</strong> {{ ticket.description }}</p>
+<div class="container py-5">
+    <!-- Nagłówek i tytuł zgłoszenia -->
+    <header class="text-center mb-5">
+        <h1 class="display-4 text-primary">{{ ticket.title }}</h1>
+        <p class="lead text-muted">
+            <strong>Status:</strong> 
+            <span class="badge" style="background-color: {{ ticket.get_status_color }}">{{ ticket.get_status_display }}</span>
+        </p>
+    </header>
 
-{% if ticket.image %}
-    <h3>Załączone zdjęcie:</h3>
-    <img src="{{ ticket.image.url }}" alt="Zdjęcie zgłoszenia" class="img-fluid">
-{% else %}
-    <p>Brak załączonego zdjęcia.</p>
-{% endif %}
+    <!-- Ramka z opisem i zdjęciem -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h3 class="card-title">Opis zgłoszenia:</h3>
+            <p class="card-text">{{ ticket.description }}</p>
+        </div>
+    </div>
 
-<a href="{% url 'ticket_list' %}" class="btn btn-secondary mt-3">Powrót do listy zgłoszeń</a>
+    <!-- Załączone zdjęcie -->
+    {% if ticket.image %}
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Załączone zdjęcie:</h5>
+                <img src="{{ ticket.image.url }}" alt="Zdjęcie zgłoszenia" class="img-fluid rounded">
+            </div>
+        </div>
+    {% else %}
+        <p>Brak załączonego zdjęcia.</p>
+    {% endif %}
+
+    <!-- Przycisk powrotu do listy -->
+    <div class="text-center">
+        <a href="{% url 'ticket_list' %}" class="btn btn-primary btn-lg mt-3">Powrót do listy zgłoszeń</a>
+    </div>
+</div>
 {% endblock %}

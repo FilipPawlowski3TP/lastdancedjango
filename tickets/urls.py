@@ -10,8 +10,11 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
     path('ticket/<int:id>/', views.ticket_detail, name='ticket_detail'),
+
 ]
 
 # Obsługuje pliki multimedialne w trybie deweloperskim
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

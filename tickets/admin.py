@@ -20,3 +20,4 @@ class TicketAdmin(admin.ModelAdmin):
 
 # Rejestracja modelu Ticket z dostosowanym adminem
 admin.site.register(Ticket, TicketAdmin)
+
