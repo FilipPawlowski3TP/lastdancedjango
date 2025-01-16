@@ -1,0 +1,16 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+<h1>{{ ticket.title }}</h1>
+<p><strong>Status:</strong> {{ ticket.get_status_display }}</p>
+<p><strong>Opis:</strong> {{ ticket.description }}</p>
+
+{% if ticket.image %}
+    <h3>Załączone zdjęcie:</h3>
+    <img src="{{ ticket.image.url }}" alt="Zdjęcie zgłoszenia" class="img-fluid">
+{% else %}
+    <p>Brak załączonego zdjęcia.</p>
+{% endif %}
+
+<a href="{% url 'ticket_list' %}" class="btn btn-secondary mt-3">Powrót do listy zgłoszeń</a>
+{% endblock %}

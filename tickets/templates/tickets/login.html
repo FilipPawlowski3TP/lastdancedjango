@@ -1,0 +1,11 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+<h1>Logowanie</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Zaloguj się</button>
+    <a href="{% url 'register' %}" class="btn btn-primary">Zarejestruj się</a>
+</form>
+{% endblock %}
