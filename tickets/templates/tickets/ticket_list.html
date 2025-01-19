@@ -1,6 +1,5 @@
 {% extends 'tickets/base.html' %}
 
-
 {% block content %}
 <h1>Lista Zgłoszeń</h1>
 
@@ -23,7 +22,7 @@
         <tr>
             <td><a href="{% url 'ticket_detail' ticket.id %}">{{ ticket.title }}</a></td>
             <td>
-                <span class="badge 
+                <span class="badge
                     {% if ticket.status == 'pending' %}
                         badge-warning
                     {% elif ticket.status == 'in_progress' %}
@@ -32,13 +31,19 @@
                         badge-success
                     {% endif %}
                 ">
-                    {{ ticket.get_status_display }}     
+                    {{ ticket.get_status_display }}
                 </span>
             </td>
             <td>{{ ticket.created_at }}</td>
         </tr>
         {% endfor %}
     </tbody>
-
 </table>
+
+{% if user.is_authenticated %}
+    <div class="text-center mt-4">
+        <a href="{% url 'ticket_create' %}" class="btn btn-primary btn-lg">Dodaj zgłoszenie</a>
+    </div>
+{% endif %}
+
 {% endblock %}

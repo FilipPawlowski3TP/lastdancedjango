@@ -4,7 +4,32 @@
 <h1>Zgłoś Usterkę</h1>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
+    <div class="form-group">
+        <label for="{{ form.title.id_for_label }}">Tytuł zgłoszenia</label>
+        {{ form.title }}
+        {% if form.title.help_text %}
+            <small class="form-text text-muted">{{ form.title.help_text }}</small>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.description.id_for_label }}">Opis zgłoszenia</label>
+        {{ form.description }}
+        {% if form.description.help_text %}
+            <small class="form-text text-muted">{{ form.description.help_text }}</small>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.category.id_for_label }}">Kategoria</label>
+        {{ form.category }}
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.image.id_for_label }}">Załącznik</label>
+        {{ form.image }}
+    </div>
+
     <button type="submit" class="btn btn-primary">Zgłoś</button>
 </form>
 {% endblock %}
