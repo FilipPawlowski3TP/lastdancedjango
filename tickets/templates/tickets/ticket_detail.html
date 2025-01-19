@@ -2,7 +2,6 @@
 
 {% block content %}
 <div class="container py-5">
-    <!-- Nagłówek i tytuł zgłoszenia -->
     <header class="text-center mb-5">
         <h1 class="display-4 text-primary">{{ ticket.title }}</h1>
         <p class="lead text-muted">
@@ -11,7 +10,6 @@
         </p>
     </header>
 
-    <!-- Ramka z opisem i zdjęciem -->
     <div class="card shadow-sm mb-4">
         <div class="card-body">
             <h3 class="card-title">Opis zgłoszenia:</h3>
@@ -19,7 +17,6 @@
         </div>
     </div>
 
-    <!-- Załączone zdjęcie -->
     {% if ticket.image %}
         <div class="card shadow-sm mb-4">
             <div class="card-body">
@@ -31,7 +28,6 @@
         <p>Brak załączonego zdjęcia.</p>
     {% endif %}
 
-    <!-- Przycisk powrotu do listy -->
     <div class="text-center">
         <a href="{% url 'ticket_list' %}" class="btn btn-primary btn-lg mt-3">Powrót do listy zgłoszeń</a>
     </div>

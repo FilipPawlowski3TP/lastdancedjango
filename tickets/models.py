@@ -21,7 +21,7 @@ class Ticket(models.Model):
     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='inny')
     image = models.ImageField(upload_to='ticket_images/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)  # Dodajemy pole updated_at
+    updated_at = models.DateTimeField(auto_now=True)
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tickets')
     assigned_to = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL,
@@ -37,4 +37,4 @@ class Ticket(models.Model):
             return '#ffc107'
         elif self.status == 'resolved':
             return '#28a745'
-        return '#6c757d'  # Kolor szary jako domyślny
+        return '#6c757d'

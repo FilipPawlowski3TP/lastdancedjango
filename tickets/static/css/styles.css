@@ -1,6 +1,4 @@
-/* style.css */
 
-/* Ustawienia dla całej aplikacji */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -9,14 +7,12 @@ body {
     height: 100%;
 }
 
-/* Wycentrowanie głównej zawartości */
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 30px;
 }
 
-/* Minimalistyczny wygląd przyciski i formularze */
 .btn {
     border-radius: 5px;
     padding: 10px 20px;
@@ -43,7 +39,6 @@ input[type="text"], input[type="password"], textarea {
     margin-bottom: 15px;
 }
 
-/* Styl dla ciemnego i jasnego motywu */
 body.dark-theme {
     background-color: #333;
     color: white;
@@ -71,7 +66,7 @@ body.dark-theme .navbar a {
     color: white;
 }
 
-/* style.css */
+
 body.dark-theme {
     background-color: #333;
     color: white;
@@ -98,21 +93,21 @@ body.dark-theme .navbar {
 body.dark-theme .navbar a {
     color: white;
 }
-/* Ciało strony */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
 }
 
-/* Nagłówek strony */
+
 h1 {
     font-weight: bold;
     color: #343a40;
     font-size: 2.5rem;
 }
 
-/* Opis zgłoszenia */
+
 strong {
     color: #007bff;
 }
@@ -122,14 +117,14 @@ p {
     line-height: 1.6;
 }
 
-/* Załączone zdjęcie */
+
 img.img-fluid {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
 }
 
-/* Przyciski */
+
 .btn {
     padding: 10px 20px;
     border-radius: 5px;
@@ -164,7 +159,7 @@ img.img-fluid {
     }
 }
 #theme-toggle {
-    z-index: 1050; /* zapewnia, że przycisk jest na wierzchu */
+    z-index: 1050;
 }
 
 .dark-theme {
@@ -186,31 +181,31 @@ img.img-fluid {
 .dark-theme .btn-secondary {
     background-color: #6c757d;
 }
-/* Ogólny wygląd strony - wyśrodkowanie kontentu */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
     color: #333;
 }
 
-/* Wyśrodkowanie zawartości na stronie */
+
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Styl nagłówka */
+
 h1 {
     text-align: center;
     color: #007bff;
 }
 
-/* Styl dla sekcji opisu zgłoszenia */
+
 .mb-4 p {
     font-size: 1.1em;
 }
 
-/* Styl dla sekcji z opisem zgłoszenia */
+
 .ticket-description {
     background-color: #ffffff;
     padding: 20px;
@@ -218,7 +213,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Styl dla przycisku powrotu */
+
 .btn-secondary {
     background-color: #007bff;
     border-color: #007bff;
@@ -229,7 +224,7 @@ h1 {
     border-color: #004085;
 }
 
-/* Styl dla zdjęcia zgłoszenia */
+
 .ticket-image img {
     max-width: 100%;
     height: auto;
@@ -237,7 +232,7 @@ h1 {
     margin-top: 20px;
 }
 
-/* Styl dla przycisku zmiany motywu */
+
 #theme-toggle {
     background-color: #28a745;
     border-color: #28a745;
@@ -247,7 +242,7 @@ h1 {
     background-color: #218838;
     border-color: #1e7e34;
 }
-/* Styl ogólny dla statusu */
+
 .status {
     font-size: 1.2em;
     font-weight: bold;
@@ -262,40 +257,38 @@ h1 {
 .badge-success {
     background-color: #28a745;
 }
-/* Ulepszony wygląd zgłoszeń w ticket_detail.html */
 
-/* Ramka dla karty z opisem */
 .card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #fff;
 }
 
-/* Cień dla karty */
+
 .card.shadow-sm {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Stylizacja zdjęcia, aby było bardziej estetyczne */
+
 .card-body img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Stylizacja nagłówka z tytułem zgłoszenia */
+
 h1 {
     font-size: 2.5rem;
     font-weight: 600;
     color: #333;
 }
 
-/* Zwiększenie przestrzeni między sekcjami */
+
 .mb-4 {
     margin-bottom: 30px;
 }
 
-/* Przyciski */
+
 .btn-secondary {
     background-color: #6c757d;
     border-color: #6c757d;
@@ -306,47 +299,45 @@ h1 {
     border-color: #545b62;
 }
 
-/* Stylowanie statusu */
+
 .badge {
     padding: 0.5em 1em;
     font-size: 1rem;
     border-radius: 12px;
     font-weight: 600;
 }
-/* Ulepszony wygląd zgłoszeń w ticket_detail.html */
 
-/* Ramka dla karty z opisem */
 .card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #fff;
 }
 
-/* Cień dla karty */
+
 .card.shadow-sm {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Stylizacja zdjęcia, aby było bardziej estetyczne */
+
 .card-body img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Stylowanie nagłówka z tytułem zgłoszenia */
+
 h1 {
     font-size: 2.5rem;
     font-weight: 600;
     color: #333;
 }
 
-/* Zwiększenie przestrzeni między sekcjami */
+
 .mb-4 {
     margin-bottom: 30px;
 }
 
-/* Przyciski */
+
 .btn-primary {
     background-color: #007bff;
     border-color: #007bff;
@@ -357,7 +348,7 @@ h1 {
     border-color: #004085;
 }
 
-/* Stylowanie statusu */
+
 .badge {
     padding: 0.5em 1em;
     font-size: 1rem;
@@ -365,7 +356,7 @@ h1 {
     font-weight: 600;
 }
 
-/* Użyj Bootstrapa do nagłówka */
+
 .display-4 {
     font-size: 3rem;
     font-weight: 700;
@@ -376,7 +367,7 @@ h1 {
     font-size: 1.25rem;
     color: #6c757d;
 }
-/* Przycisk zmiany motywu */
+
 #theme-toggle {
     position: fixed;
     bottom: 20px;
@@ -384,18 +375,18 @@ h1 {
     z-index: 999;
 }
 
-/* Dostosowanie przycisków w navbar */
+
 .navbar-nav .nav-item .btn {
     margin-right: 10px;
 }
 
-/* Dostosowanie przycisku "Wyloguj się" */
+
 .btn-custom {
-    background-color: #007bff; /* Zmieniasz kolor tła przycisku */
-    color: white; /* Zmieniasz kolor tekstu */
+    background-color: #007bff;
+    color: white;
 }
 
-/* Dodatkowe stylizacje przycisków */
+
 .navbar-nav .nav-item .btn {
     margin-right: 10px;
 }

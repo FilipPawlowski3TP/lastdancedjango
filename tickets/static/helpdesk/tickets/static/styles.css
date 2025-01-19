@@ -1,6 +1,4 @@
-/* style.css */
 
-/* Ustawienia dla całej aplikacji */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -9,14 +7,12 @@ body {
     height: 100%;
 }
 
-/* Wycentrowanie głównej zawartości */
 .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 30px;
 }
 
-/* Minimalistyczny wygląd przyciski i formularze */
 .btn {
     border-radius: 5px;
     padding: 10px 20px;
@@ -43,7 +39,6 @@ input[type="text"], input[type="password"], textarea {
     margin-bottom: 15px;
 }
 
-/* Styl dla ciemnego i jasnego motywu */
 body.dark-theme {
     background-color: #333;
     color: white;
@@ -71,7 +66,7 @@ body.dark-theme .navbar a {
     color: white;
 }
 
-/* style.css */
+
 body.dark-theme {
     background-color: #333;
     color: white;
@@ -98,3 +93,305 @@ body.dark-theme .navbar {
 body.dark-theme .navbar a {
     color: white;
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+h1 {
+    font-weight: bold;
+    color: #343a40;
+    font-size: 2.5rem;
+}
+
+
+strong {
+    color: #007bff;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+#theme-toggle {
+    z-index: 1050;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+.dark-theme h1,
+.dark-theme p {
+    color: #f1f1f1;
+}
+
+
+.dark-theme .btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.dark-theme .btn-secondary {
+    background-color: #6c757d;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+
+.mb-4 p {
+    font-size: 1.1em;
+}
+
+
+.ticket-description {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn-secondary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+.ticket-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+
+#theme-toggle {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+#theme-toggle:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.status {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.badge-warning {
+    background-color: #FF0000;
+}
+
+.badge-info {
+    background-color: #ffc107;
+}
+.badge-success {
+    background-color: #28a745;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+
+.card.shadow-sm {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+
+.badge {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+
+.card.shadow-sm {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+
+.badge {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+
+.display-4 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+
+.navbar-nav .nav-item .btn {
+    margin-right: 10px;
+}
+
+
+.btn-custom {
+    background-color: #007bff;
+    color: white;
+}
+
+
+.navbar-nav .nav-item .btn {
+    margin-right: 10px;
+}
+
+
+
+
+
