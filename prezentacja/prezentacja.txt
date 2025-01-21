@@ -1,0 +1,3 @@
+Tytuł: Komputer nie uruchamia się po aktualizacji
+Opis zgłoszenia: Po ostatniej aktualizacji systemu operacyjnego komputer nie uruchamia się poprawnie. Po włączeniu pojawia się ekran ładowania,
+a następnie komputer się wyłącza. Proszę o pomoc w rozwiązaniu problemu.
